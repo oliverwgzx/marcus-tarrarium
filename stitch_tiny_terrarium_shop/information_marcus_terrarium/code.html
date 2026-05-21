@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="light" lang="sv"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vad är ett terrarium? | Marcus Terrarium</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#e1e3e1",
+                      "primary": "#051a0f",
+                      "surface-bright": "#f8faf8",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed": "#0a2014",
+                      "surface-container": "#eceeec",
+                      "on-error": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "outline": "#737973",
+                      "surface-dim": "#d8dad9",
+                      "on-tertiary-container": "#899771",
+                      "primary-fixed": "#d0e9d6",
+                      "primary-container": "#1a2f23",
+                      "on-secondary-fixed": "#131e16",
+                      "secondary-fixed-dim": "#bccabd",
+                      "tertiary": "#0f1902",
+                      "on-primary-container": "#809787",
+                      "outline-variant": "#c2c8c2",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-fixed-variant": "#3d4a40",
+                      "on-primary-fixed-variant": "#364c3e",
+                      "on-surface-variant": "#424843",
+                      "surface-container-high": "#e6e9e7",
+                      "secondary": "#556257",
+                      "error-container": "#ffdad6",
+                      "surface-container-low": "#f2f4f2",
+                      "secondary-container": "#d5e3d5",
+                      "surface": "#f8faf8",
+                      "tertiary-fixed-dim": "#becca3",
+                      "on-surface": "#191c1b",
+                      "tertiary-container": "#232e12",
+                      "tertiary-fixed": "#dae8be",
+                      "inverse-surface": "#2e3130",
+                      "secondary-fixed": "#d8e6d8",
+                      "on-secondary-container": "#59665b",
+                      "inverse-primary": "#b4ccbb",
+                      "error": "#ba1a1a",
+                      "surface-tint": "#4d6355",
+                      "on-tertiary": "#ffffff",
+                      "inverse-on-surface": "#eff1ef",
+                      "primary-fixed-dim": "#b4ccbb",
+                      "background": "#f8faf8",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed": "#141f05",
+                      "on-background": "#191c1b",
+                      "surface-container-highest": "#e1e3e1",
+                      "on-tertiary-fixed-variant": "#3f4b2c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-gap": "80px",
+                      "container-padding": "24px",
+                      "base": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "body-md": ["Hanken Grotesk"],
+                      "headline-lg": ["Playfair Display"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "label-caps": ["Hanken Grotesk"],
+                      "display-lg": ["Playfair Display"],
+                      "headline-lg-mobile": ["Playfair Display"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .cycle-dot {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #d0e9d6;
+            border-radius: 50%;
+            box-shadow: 0 0 15px #d0e9d6;
+            animation: pulse 3s infinite ease-in-out;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.5); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-md px-container-padding py-base max-w-7xl mx-auto left-1/2 -translate-x-1/2 flex justify-between items-center">
+<div class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">Marcus Terrarium</div>
+<div class="hidden md:flex items-center gap-gutter font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Hem</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Sortiment</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Skötselråd</a>
+<a class="text-primary border-b border-primary pb-1" href="#">Information</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container rounded-full transition-all duration-300">
+<span class="material-symbols-outlined text-primary">shopping_cart</span>
+</button>
+<button class="md:hidden p-2">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="px-container-padding mb-section-gap">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 space-y-6">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Utbildning</span>
+<h1 class="font-display-lg text-display-lg text-primary leading-tight">Vad är ett terrarium?</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Ett terrarium är en miniatyrversion av ett naturligt ekosystem, där en begränsad mängd resurser används för att upprätthålla livet för växterna och mikroorganismerna som finns där inne.
+                    </p>
+</div>
+<div class="md:col-span-6 relative aspect-square md:aspect-auto md:h-[600px] overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover" data-alt="A macro photograph of a lush, verdant moss terrarium inside a thick glass jar, showcasing delicate layers of green moss and tiny fern sprouts. Soft morning light filters through the glass, highlighting the condensation droplets on the inner surface. The overall atmosphere is tranquil, organic, and premium, emphasizing a deep forest aesthetic within a minimalist light-mode environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbyX8ArXx4aU1gBm420AmXEIcAF-DCHINvRg0XpsmiHIrnRkaV-zp-4royeRIzGDFqmtPAJ95gkGqi5Wzm_BcYUDduK9NrvNRXtHbv4PL4ML5ts0Y7cp026DpbQ7Di27x3ChTNBE1qEoQIIHpyHjZDAcHeXXY_aR3gw-kA5zMzauhVA9KgJdYHVPAv24Eimj_S_fm9HLPrcIpdD1j1LvtFv8eEVGtcKRitIyGbgEVWO_V3nL9_HUkZhIEGtIpfYFgZwmEFMVd4Ec4"/>
+</div>
+</div>
+</section>
+<!-- The Cycle Section (Bento Grid Style) -->
+<section class="px-container-padding py-section-gap bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16 text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Det slutna kretsloppet</h2>
+<div class="w-16 h-1 bg-primary-container mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl scroll-reveal transition-all hover:shadow-[0px_10px_30px_rgba(26,47,35,0.04)]">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary-container">eco</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile mb-3">Produktion</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Dessa samverkar med varandra och sin omgivning för att skapa en självförsörjande enhet. Växterna producerar syre genom fotosyntes.
+                        </p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl scroll-reveal delay-100 transition-all hover:shadow-[0px_10px_30px_rgba(26,47,35,0.04)]">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary-container">thermostat</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile mb-3">Avdunstning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Värmen i den slutna behållaren gör att vattnet avdunstar från jorden och växternas blad, vilket skapar en fuktig atmosfär.
+                        </p>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl scroll-reveal delay-200 transition-all hover:shadow-[0px_10px_30px_rgba(26,47,35,0.04)]">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary-container">water_drop</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile mb-3">Regn</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Ångan samlas på det kallare glaset för att sedan "regna" tillbaka ner till jorden och växterna, precis som i naturen.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Illustration Overlay Section -->
+<section class="px-container-padding py-section-gap">
+<div class="max-w-5xl mx-auto relative rounded-3xl overflow-hidden bg-primary-container text-surface p-12 md:p-24">
+<!-- Abstract Botanical Illustration Background -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-10 right-10 w-64 h-64 border border-surface rounded-full"></div>
+<div class="absolute -bottom-20 -left-20 w-96 h-96 border border-surface rounded-full"></div>
+</div>
+<div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-headline-lg text-display-lg text-primary-fixed mb-6 leading-tight italic">Ett litet universum bakom glas.</h2>
+<p class="font-body-lg text-primary-fixed-dim leading-relaxed">
+                            Genom att observera ett terrarium får man en unik inblick i naturens mest grundläggande processer. Det är inte bara en inredningsdetalj, utan ett levande konstverk som sköter sig självt.
+                        </p>
+<div class="mt-10 flex gap-4">
+<button class="bg-primary-fixed text-primary px-8 py-4 rounded-full font-label-caps uppercase tracking-wider hover:bg-surface transition-all duration-300 transform hover:scale-105">
+                                Utforska kollektionen
+                            </button>
+</div>
+</div>
+<div class="relative h-64 md:h-96 flex items-center justify-center">
+<!-- Simulated cycle visualization -->
+<div class="w-64 h-64 border-2 border-dashed border-primary-fixed/30 rounded-full flex items-center justify-center animate-[spin_20s_linear_infinite]">
+<div class="absolute -top-1.5 left-1/2 -translate-x-1/2 cycle-dot"></div>
+<div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 cycle-dot"></div>
+<div class="absolute top-1/2 -left-1.5 -translate-y-1/2 cycle-dot"></div>
+<div class="absolute top-1/2 -right-1.5 -translate-y-1/2 cycle-dot"></div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed text-7xl opacity-50">nest_eco_leaf</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Educational Detail -->
+<section class="px-container-padding py-section-gap mb-20">
+<div class="max-w-3xl mx-auto text-center space-y-8">
+<span class="material-symbols-outlined text-4xl text-primary/30">eco</span>
+<p class="font-headline-lg text-headline-lg italic text-secondary leading-relaxed">
+                    "Ett terrarium är beviset på att livet hittar en väg, även på den minsta av ytor, så länge balansen bibehålls."
+                </p>
+<div class="pt-4 border-t border-outline-variant/30 w-32 mx-auto"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-container-padding py-section-gap flex flex-col md:flex-row justify-between items-start gap-gutter bg-surface-container-lowest border-t border-outline-variant/30">
+<div class="space-y-4">
+<div class="font-display-lg text-headline-lg-mobile text-primary tracking-tight">Marcus Terrarium</div>
+<p class="text-on-surface-variant font-body-md max-w-xs">© 2024 Marcus Terrarium. Handgjorda ekosystem.</p>
+</div>
+<div class="flex flex-wrap gap-x-12 gap-y-6">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-on-surface-variant opacity-50 uppercase mb-2">Socialt</span>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 underline underline-offset-4" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 underline underline-offset-4" href="#">YouTube</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-on-surface-variant opacity-50 uppercase mb-2">Information</span>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 underline underline-offset-4" href="#">Kontakt</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 underline underline-offset-4" href="#">Fraktvillkor</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Initialize animations on load
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.querySelectorAll('.scroll-reveal').forEach((el, i) => {
+                    if(el.getBoundingClientRect().top < window.innerHeight) {
+                        setTimeout(() => el.classList.add('active'), i * 100);
+                    }
+                });
+            }, 100);
+        });
+    </script>
+</body></html>

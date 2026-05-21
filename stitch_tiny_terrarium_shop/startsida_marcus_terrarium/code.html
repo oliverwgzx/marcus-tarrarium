@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="light" lang="sv"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Marcus Terrarium | Handgjorda Ekosystem</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e1e3e1",
+                    "primary": "#051a0f",
+                    "surface-bright": "#f8faf8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#0a2014",
+                    "surface-container": "#eceeec",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "outline": "#737973",
+                    "surface-dim": "#d8dad9",
+                    "on-tertiary-container": "#899771",
+                    "primary-fixed": "#d0e9d6",
+                    "primary-container": "#1a2f23",
+                    "on-secondary-fixed": "#131e16",
+                    "secondary-fixed-dim": "#bccabd",
+                    "tertiary": "#0f1902",
+                    "on-primary-container": "#809787",
+                    "outline-variant": "#c2c8c2",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#3d4a40",
+                    "on-primary-fixed-variant": "#364c3e",
+                    "on-surface-variant": "#424843",
+                    "surface-container-high": "#e6e9e7",
+                    "secondary": "#556257",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#f2f4f2",
+                    "secondary-container": "#d5e3d5",
+                    "surface": "#f8faf8",
+                    "tertiary-fixed-dim": "#becca3",
+                    "on-surface": "#191c1b",
+                    "tertiary-container": "#232e12",
+                    "tertiary-fixed": "#dae8be",
+                    "inverse-surface": "#2e3130",
+                    "secondary-fixed": "#d8e6d8",
+                    "on-secondary-container": "#59665b",
+                    "inverse-primary": "#b4ccbb",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#4d6355",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#eff1ef",
+                    "primary-fixed-dim": "#b4ccbb",
+                    "background": "#f8faf8",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#141f05",
+                    "on-background": "#191c1b",
+                    "surface-container-highest": "#e1e3e1",
+                    "on-tertiary-fixed-variant": "#3f4b2c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "80px",
+                    "container-padding": "24px",
+                    "base": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-panel {
+            background: rgba(248, 250, 248, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(5, 26, 15, 0.4), transparent);
+        }
+        body {
+            background-color: #f8faf8;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-container-padding py-base max-w-7xl mx-auto left-1/2 -translate-x-1/2 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-md">
+<div class="font-display-lg text-headline-lg text-primary dark:text-primary-fixed tracking-tight">
+            Marcus Terrarium
+        </div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed border-b border-primary dark:border-primary-fixed pb-1" href="#">Hem</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#sortiment">Sortiment</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Skötselråd</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Information</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-all duration-300 scale-95 duration-200 ease-in-out">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="md:hidden p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-0">
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[700px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Ett storslaget handgjort glasterrarium med frodig mossa och miniatyrväxter" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPVWKjSJOD56TS8szh43faqGHgnxlUzVPiVQ2DuDRsE-UTpcsF5hrnAJ_DrPAFNStDBgg0a7NJWcEi_QMQMmmU0WF2CAknaD5u3cX29B4HoPeNS4M-suJLGu0wWxR-sZBDGESghgMA9ePdq890bV4wBXmcAcMnbGt5UsWrIDenOzcvZmDuEqaFQv9m_RboIDIuSDLfx5Cpq-6Iy-qQRi2NlhdWyjcej_KndhLo_eTO8XwRWTjFoxmuqKpJcVs2CGbNv5MEy8CDb8c"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-container-padding w-full">
+<div class="max-w-2xl text-white">
+<h1 class="font-display-lg text-display-lg mb-4 text-surface-container-lowest leading-tight">
+                        Skapa ditt eget lilla ekosystem
+                    </h1>
+<p class="font-body-lg text-body-lg mb-10 text-surface-bright/90 max-w-lg">
+                        Handgjorda terrarier som för in naturen i ditt hem. Ett självgående stycke natur i glas, designat för att hålla i generationer.
+                    </p>
+<a class="inline-flex items-center px-10 py-5 bg-primary text-on-primary font-label-caps text-label-caps tracking-widest uppercase transition-all hover:bg-primary-container hover:shadow-xl hover:-translate-y-1" href="#sortiment">
+                        Se vårt sortiment
+                    </a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-surface-bright opacity-50 text-4xl" data-icon="expand_more">expand_more</span>
+</div>
+</section>
+<!-- Why Terrarium? Section -->
+<section class="py-section-gap px-container-padding max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 order-2 md:order-1">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full aspect-[4/5] object-cover" data-alt="Close up detail of a lush green terrarium interior showing different textures of moss and small ferns under soft natural lighting in a premium botanical setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIY7Sejg1RbMKk_JgKM1Wt24RwJSuMI66PxJ4yTpTC7b-h0qrQE3bkdhoqilAwY_kWPy6Pu-xXHgxWuBOlbzaHMSEZ-AQ_qZFINuGiI4weKsD_XAV94TwEXM3-_MhcSsBwVHb9mc5Z3qPgPCqztxl2ERGMcbjnmD0SmC55gepPLCndrtS7CtCZv612ga6C6Po4bkO37ORE8cu-wMipWxy-ay2q88_xc5fS6FwwfX_IV-UET_Pw17CAzd5LAOkgYaqfiYAv56oUwsM"/>
+</div>
+</div>
+<div class="md:col-span-7 md:pl-12 order-1 md:order-2 mb-12 md:mb-0">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-4 block">Filosofin</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Varför ett terrarium?</h2>
+<div class="space-y-10">
+<div class="flex gap-6 items-start group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="eco">eco</span>
+</div>
+<div>
+<h3 class="font-body-lg text-body-lg font-bold text-primary mb-2">Hållbarhet</h3>
+<p class="text-on-surface-variant">Våra terrarier är slutna ekosystem som återvinner sitt eget vatten. De kräver minimal skötsel och lever i symbios med sin omgivning.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+</div>
+<div>
+<h3 class="font-body-lg text-body-lg font-bold text-primary mb-2">Estetik</h3>
+<p class="text-on-surface-variant">Varje objekt är ett unikt konstverk. Kombinationen av glas, levande växter och organiska material skapar en lugnande blickpunkt i rummet.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="self_improvement">self_improvement</span>
+</div>
+<div>
+<h3 class="font-body-lg text-body-lg font-bold text-primary mb-2">Välmående</h3>
+<p class="text-on-surface-variant">Att ha levande grönska nära sig sänker stressnivåer. Ett terrarium ger dig en bit skog att vila ögonen på, oavsett årstid.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Highlight (Bento Grid Inspired) -->
+<section class="py-section-gap bg-surface-container-low" id="sortiment">
+<div class="max-w-7xl mx-auto px-container-padding">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Utvalt sortiment</h2>
+<p class="font-body-md text-on-surface-variant max-w-xl mx-auto">Utforska våra mest populära kompositioner, från bordterrarier till stora golvmodeller.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Large Feature Card -->
+<div class="md:col-span-2 relative group cursor-pointer overflow-hidden rounded-xl bg-white shadow-sm border border-outline-variant/20">
+<div class="aspect-[16/9] w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A large cinematic shot of a bespoke tall glass cylinder terrarium containing a miniature mountain scene with weathered rocks and ferns in a bright modern studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb1lLQ2HuiCp1EopjZxo_ziDVuYUEvAs2_N5Jx1IKc9p1Qd4Sxj5_aWX8H4KzFQoJt1XiCjQqd26RaBd82_0uzG_fJS2JR1yvBiXaZ0AYXWkiGe8o2a4yFMG2825n6LfGwxi3heKyiINWL_Z5BFGVJbUiybUtO31tS-yTr1BpcMs31Led2lmQ6WHGEWE7yFoO_j8tCBh_-0kfOMWzdo05ApJvBtbT0mdwXuOa0zWyFIjnShGE9FwD4_w4N0E6j3WY2cuNNregoQt0"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-end">
+<div>
+<span class="text-label-caps font-label-caps text-secondary">PREMIUM COLLECTION</span>
+<h3 class="text-headline-lg font-headline-lg text-primary mt-2">Den Stora Skogen</h3>
+</div>
+<span class="text-headline-lg font-display-lg text-primary">2.495:-</span>
+</div>
+</div>
+</div>
+<!-- Small Card 1 -->
+<div class="bg-primary-container p-8 flex flex-col justify-between rounded-xl text-on-primary-container group">
+<div>
+<span class="material-symbols-outlined text-4xl mb-6 opacity-80" data-icon="auto_awesome">auto_awesome</span>
+<h3 class="text-headline-lg font-headline-lg mb-4 text-primary-fixed">Skräddarsytt</h3>
+<p class="font-body-md opacity-80">Vill du ha något helt unikt? Vi designar terrarier efter dina önskemål och mått.</p>
+</div>
+<a class="inline-flex items-center gap-2 font-label-caps text-label-caps uppercase tracking-wider mt-12 hover:translate-x-2 transition-transform" href="#">
+                            Boka konsultation <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Small Card 2 -->
+<div class="group cursor-pointer overflow-hidden rounded-xl bg-white shadow-sm border border-outline-variant/20">
+<div class="aspect-square overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Detailed view of a small desktop terrarium inside a round glass bowl with colorful fittonia plants and dark soil on a clean white table surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChzoSCEU47ja1ExuT446AuokzKAaIFRIxXvaCSBu6FEmpD_nH2GFQco1j1BPU-NuAJQ7fd-_N2TdJYOF7vZtuszHILNLSeV5DpzDaenuzcwylNm9wziaaworGX5fYfaEWb-pGJFatR6Kzm86EOu-d9X4CQLFzXa7h8bvJ_s_bEE6uZDQsheKbToj5cXgp9Klpj2IAgTuiyTjZ8cvyP0q-_KYzgTi911y9ruDGEIgAHLLlYwCajwgOZehmEsnSE0xZj0KCf5TFFSus"/>
+</div>
+<div class="p-6">
+<h3 class="text-body-lg font-bold text-primary">Mikro-ekosystem</h3>
+<p class="text-on-surface-variant text-body-md">549:-</p>
+</div>
+</div>
+<!-- Small Card 3 -->
+<div class="group cursor-pointer overflow-hidden rounded-xl bg-white shadow-sm border border-outline-variant/20">
+<div class="aspect-square overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A lush green indoor plant setting with various glass containers and terrariums arranged on a vintage wooden shelf with soft backlighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2SbjsBGLeRn-yeDwJIVbbgcOUKYZe36uRu-6apkQ4vud5maeSxh-EbrDl3mMgQ_Oui_NN5JgoDXfCJ3Qf-zEIAJUbDjifj7sLvMIuetGrhtyQyP0TM5xFZFZyhSaiouaKO46qryC3P6yK89dslmrBovZH9Sha9iVBX5JicXsUJSm2RS3yJHConJktoNm_P-iV8vPueWWt1C0mp5-jZjp943CClkUdR4I0evGEOw24BwrEWCfmGdJ0TU146xCXyiXajq3PA9LbU08"/>
+</div>
+<div class="p-6">
+<h3 class="text-body-lg font-bold text-primary">Mellanterrarium</h3>
+<p class="text-on-surface-variant text-body-md">1.295:-</p>
+</div>
+</div>
+<!-- Small Card 4 -->
+<div class="group cursor-pointer overflow-hidden rounded-xl bg-white shadow-sm border border-outline-variant/20">
+<div class="aspect-square overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Artistic macro photography of moss layers inside a glass container, highlighting the vibrant greens and delicate textures of the plant life." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPXQX2cZxMomXrvG8NOkUbOPei7AXX6mOjCG4CcKOe9MbLWlEbWBjBnUrwVQ1mF88E0F5XbdxoqmQ6KZ5gkS7xbMec-Z10k7A3fdv16qGpvFmNi5Wp1mn0NoTSiY7VdOB-OCtPESbP9FhLflEihnWvZjlzS6KEY3YSfQg7uxr9ddvXuzhnnFkYQAKnFpnSGrgeiuWrWhDjoClfB69HIOvprlRqrJGmsjevTytDXuqoIzVQC95l8DGZUHXpMnLkLIAUcOl50B8jb-c"/>
+</div>
+<div class="p-6">
+<h3 class="text-body-lg font-bold text-primary">Mossa &amp; Berg</h3>
+<p class="text-on-surface-variant text-body-md">895:-</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Community Section -->
+<section class="py-section-gap px-container-padding">
+<div class="max-w-3xl mx-auto text-center glass-panel p-12 rounded-3xl border border-outline-variant/10 shadow-sm">
+<span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="local_florist">local_florist</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Håll kontakten</h2>
+<p class="text-on-surface-variant mb-10">Få tips om skötsel, förhandsvisningar av nya terrarier och inbjudningar till våra workshops direkt i din inkorg.</p>
+<form class="flex flex-col sm:flex-row gap-4">
+<input class="flex-grow bg-transparent border-b border-primary/20 focus:border-primary focus:ring-0 transition-all px-4 py-3 outline-none" placeholder="Din e-postadress" type="email"/>
+<button class="px-8 py-3 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container transition-colors" type="submit">
+                        Prenumerera
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-container-padding py-section-gap flex flex-col md:flex-row justify-between items-start gap-gutter bg-surface-container-lowest dark:bg-tertiary-container border-t border-outline-variant/30">
+<div class="max-w-xs">
+<div class="font-display-lg text-headline-lg-mobile text-primary dark:text-tertiary-fixed mb-4">
+                Marcus Terrarium
+            </div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant">
+                Skapande av levande konst i Stockholm sedan 2021.
+            </p>
+</div>
+<div class="grid grid-cols-2 gap-12">
+<div class="flex flex-col gap-3">
+<span class="font-label-caps text-label-caps text-primary/50 mb-2">NAVIGERING</span>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary dark:hover:text-tertiary-fixed underline underline-offset-4 transition-opacity duration-300" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary dark:hover:text-tertiary-fixed underline underline-offset-4 transition-opacity duration-300" href="#">YouTube</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-caps text-label-caps text-primary/50 mb-2">SUPPORT</span>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary dark:hover:text-tertiary-fixed underline underline-offset-4 transition-opacity duration-300" href="#">Kontakt</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary dark:hover:text-tertiary-fixed underline underline-offset-4 transition-opacity duration-300" href="#">Fraktvillkor</a>
+</div>
+</div>
+<div class="w-full md:w-auto mt-12 md:mt-0 text-on-surface-variant dark:text-on-tertiary-fixed-variant font-body-md text-body-md">
+            © 2024 Marcus Terrarium. Handgjorda ekosystem.
+        </div>
+</footer>
+<script>
+        // Simple scroll effect for navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm');
+                nav.style.backgroundColor = 'rgba(248, 250, 248, 0.95)';
+            } else {
+                nav.classList.remove('shadow-sm');
+                nav.style.backgroundColor = 'rgba(248, 250, 248, 0.8)';
+            }
+        });
+
+        // Click interaction for products
+        document.querySelectorAll('.cursor-pointer').forEach(item => {
+            item.addEventListener('mousedown', () => {
+                item.style.transform = 'scale(0.98)';
+            });
+            item.addEventListener('mouseup', () => {
+                item.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>

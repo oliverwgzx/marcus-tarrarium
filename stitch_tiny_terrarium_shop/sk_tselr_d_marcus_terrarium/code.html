@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="light" lang="sv"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skötselråd - Marcus Terrarium</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Playfair+Display:wght@600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e1e3e1",
+                        "primary": "#051a0f",
+                        "surface-bright": "#f8faf8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#0a2014",
+                        "surface-container": "#eceeec",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "outline": "#737973",
+                        "surface-dim": "#d8dad9",
+                        "on-tertiary-container": "#899771",
+                        "primary-fixed": "#d0e9d6",
+                        "primary-container": "#1a2f23",
+                        "on-secondary-fixed": "#131e16",
+                        "secondary-fixed-dim": "#bccabd",
+                        "tertiary": "#0f1902",
+                        "on-primary-container": "#809787",
+                        "outline-variant": "#c2c8c2",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#3d4a40",
+                        "on-primary-fixed-variant": "#364c3e",
+                        "on-surface-variant": "#424843",
+                        "surface-container-high": "#e6e9e7",
+                        "secondary": "#556257",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f2f4f2",
+                        "secondary-container": "#d5e3d5",
+                        "surface": "#f8faf8",
+                        "tertiary-fixed-dim": "#becca3",
+                        "on-surface": "#191c1b",
+                        "tertiary-container": "#232e12",
+                        "tertiary-fixed": "#dae8be",
+                        "inverse-surface": "#2e3130",
+                        "secondary-fixed": "#d8e6d8",
+                        "on-secondary-container": "#59665b",
+                        "inverse-primary": "#b4ccbb",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#4d6355",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#eff1ef",
+                        "primary-fixed-dim": "#b4ccbb",
+                        "background": "#f8faf8",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#141f05",
+                        "on-background": "#191c1b",
+                        "surface-container-highest": "#e1e3e1",
+                        "on-tertiary-fixed-variant": "#3f4b2c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "80px",
+                        "container-padding": "24px",
+                        "base": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(5, 26, 15, 0.03) 0%, rgba(5, 26, 15, 0) 100%);
+        }
+        .instruction-card {
+            box-shadow: 0px 10px 30px rgba(26, 47, 35, 0.04);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .instruction-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 20px 40px rgba(26, 47, 35, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 w-full z-50 glass-header bg-surface/80 dark:bg-surface-container/80 transition-all duration-300">
+<div class="max-w-7xl mx-auto px-container-padding py-base flex justify-between items-center">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary dark:text-primary-fixed tracking-tight">
+                Marcus Terrarium
+            </span>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Hem</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Sortiment</a>
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed border-b border-primary dark:border-primary-fixed pb-1" href="#">Skötselråd</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Information</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-primary">shopping_cart</span>
+</button>
+<button class="md:hidden p-2">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-container-padding mb-section-gap hero-gradient">
+<div class="flex flex-col md:flex-row items-center gap-gutter">
+<div class="w-full md:w-1/2 space-y-6">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Hållbarhet &amp; Harmoni</span>
+<h1 class="font-display-lg text-display-lg text-primary leading-tight">Skötselråd</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Ett terrarium är ett självförsörjande ekosystem. Skötselråden är enkla men viktiga för att dina växter ska trivas under lång tid framöver.
+                    </p>
+</div>
+<div class="w-full md:w-1/2 relative aspect-square md:aspect-video rounded-xl overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="A lush green moss terrarium inside a high-quality glass sphere, resting on a minimalist oak table. The soft natural lighting filters through a nearby window, highlighting the dew drops on the moss and the vibrant green colors. The scene evokes a sense of serenity, premium craftsmanship, and modern botanical art." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN9qsJl67So8Au_HENFVHyk7mxO2Iu--OxgD6MaJ2qahdoSIPGmwYO0Jci0Y-paPBdxk74_4jkVmSnpExR5CwIHIK74KGrhq56o_639KfOP25HDdh_9zXm4dgZVFXxLc3I4PUoHSHnkpuK5gPeOUwuwc_n7h-qqFuTYWyUqD9rceBBgpgmKoe148yxEb9f7IcMQ2uJmptQFQupaJ7iOaiyskz9wQtv_xVJDJGdki3Bdv_k4OKoG2r-CwtJr9LlU1GRecX6DXU0pSM"/>
+</div>
+</div>
+</section>
+<!-- Bento Grid Instructions -->
+<section class="max-w-7xl mx-auto px-container-padding pb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Placering & Ljus -->
+<div class="md:col-span-8 instruction-card bg-secondary-container/30 p-10 rounded-xl border border-outline-variant/20 flex flex-col justify-between min-h-[400px]">
+<div class="flex flex-col gap-6">
+<div class="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">light_mode</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4">Placering &amp; Ljus</h3>
+<div class="space-y-4 max-w-2xl">
+<p class="font-body-lg text-body-lg text-on-secondary-container">
+                                    Placera terrariet i <strong class="text-primary">indirekt solljus</strong>, exempelvis vid ett fönster eller i ett ljust rum. Undvik direkt solljus då värmen blir för hög för de känsliga växterna bakom glaset.
+                                </p>
+<p class="font-body-lg text-body-lg text-on-secondary-container/80 italic">
+                                    Tips: Terrariet fungerar även bra under en stark lampa med vitt eller varmvitt ljus, cirka 8 timmar per dygn.
+                                </p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-8 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">8 Timmar / Dygn</span>
+</div>
+</div>
+<!-- Kondens - The Breath -->
+<div class="md:col-span-4 instruction-card bg-surface-container-low p-10 rounded-xl border border-outline-variant/10 flex flex-col justify-center items-center text-center">
+<div class="w-16 h-16 mb-8 rounded-full bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">water_drop</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4">Kondens</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Det är helt normalt att det bildas kondens på insidan av glaset. Det är ett tecken på den höga luftfuktigheten som krävs. Mängden varierar ofta naturligt under dygnet.
+                    </p>
+</div>
+<!-- Maintenance Cluster -->
+<div class="md:col-span-4 instruction-card bg-white p-10 rounded-xl flex flex-col gap-6">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-fixed">content_cut</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary">Beskärning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Klipp bort växter vid behov om det blir för tät växtlighet. Detta hjälper till att bibehålla balansen i ditt ekosystem.
+                    </p>
+</div>
+<div class="md:col-span-4 instruction-card bg-white p-10 rounded-xl flex flex-col gap-6">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-fixed">air</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary">Vädring</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Vädra ca en gång i månaden genom att ta bort plastfilmen några minuter. Släpp in ny luft och förslut sedan noga igen.
+                    </p>
+</div>
+<div class="md:col-span-4 instruction-card bg-white p-10 rounded-xl flex flex-col gap-6">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-fixed">clean_hands</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary">Putsning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Putsa insidan av glaset med lätt fuktat hushållspapper. Använd <strong class="text-primary">endast vatten</strong> – aldrig rengöringsmedel eller fönsterputs.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Video & Closing -->
+<section class="bg-primary text-on-primary py-section-gap overflow-hidden">
+<div class="max-w-7xl mx-auto px-container-padding">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2 space-y-8">
+<h2 class="font-display-lg text-display-lg tracking-tight">Lycka till!</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container text-balance">
+                            Terrariet sköter i stort sett sig självt så länge det får tillräckligt med ljus. Har du fler frågor? Se mina videoguider på YouTube.
+                        </p>
+<a class="inline-flex items-center gap-3 bg-on-tertiary-container text-primary px-8 py-4 rounded-full font-bold hover:opacity-90 transition-opacity" href="#">
+<span class="material-symbols-outlined">play_circle</span>
+                            Se guiden på YouTube
+                        </a>
+</div>
+<div class="w-full md:w-1/2">
+<div class="relative group cursor-pointer overflow-hidden rounded-2xl aspect-video">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A professional close-up shot of hands carefully trimming a small green plant inside a glass terrarium with fine silver scissors. The background is a soft-focus workshop filled with various plants and glass jars. The lighting is warm and cinematic, emphasizing the tactile nature of botanical maintenance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB-yigRa1FXU4HUcx_UH38oC_QaXx-RO3wz8R0XPi5nqgxXgCccvwy0O2lDvUmi_HqbKOfkcsCerQxRfc94pCbRydEakQn0G4JLjvwDxELjby5lqO5zPZADdzulcJqFTlsG1KE3pyRr_sf__JTY3ZYKD6qj3Vy4yeCSYRsL2KmMn9K8V59kLQnwoTofPs6zHscZmQ_T3hi-JPb-VhlMkIKtkqMZnWUmcIkbjx3ifQIVtkP0URq4O46DVDfnYXh9z5XfrY86c02cnA"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+<div class="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full px-container-padding py-section-gap flex flex-col md:flex-row justify-between items-start gap-gutter bg-surface-container-lowest dark:bg-tertiary-container border-t border-outline-variant/30">
+<div class="space-y-4">
+<span class="font-display-lg text-headline-lg-mobile text-primary dark:text-tertiary-fixed">Marcus Terrarium</span>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant">
+                © 2024 Marcus Terrarium. Handgjorda ekosystem.
+            </p>
+</div>
+<div class="flex flex-col md:flex-row gap-8 md:gap-16">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-secondary dark:text-on-tertiary-container uppercase mb-2">Socialt</span>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary dark:hover:text-tertiary-fixed transition-all underline-offset-4" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary dark:hover:text-tertiary-fixed transition-all underline-offset-4" href="#">YouTube</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-secondary dark:text-on-tertiary-container uppercase mb-2">Kundservice</span>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary dark:hover:text-tertiary-fixed transition-all underline-offset-4" href="#">Kontakt</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary dark:hover:text-tertiary-fixed transition-all underline-offset-4" href="#">Fraktvillkor</a>
+</div>
+</div>
+</footer>
+<script>
+        // Subtle scroll behavior for the glass navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('py-2', 'shadow-sm');
+                nav.classList.remove('py-base');
+            } else {
+                nav.classList.remove('py-2', 'shadow-sm');
+                nav.classList.add('py-base');
+            }
+        });
+    </script>
+</body></html>
