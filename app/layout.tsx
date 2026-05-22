@@ -37,6 +37,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Marcus Terrarium" }],
   creator: "Marcus Terrarium",
   robots: { index: true, follow: true },
+  verification: { google: "9Py7OR9NLhkARrItmUuk6jvZT65L_Rc25RvePtPcmjw" },
   openGraph: {
     type: "website",
     locale: "sv_SE",
