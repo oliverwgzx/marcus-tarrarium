@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import SkotselSection from "../components/SkotselSection";
 import YoutubeSection from "../components/YoutubeSection";
+
+export const metadata: Metadata = {
+  title: "Information & Skötselråd",
+  description:
+    "Lär dig mer om slutna ekosystem och hur du sköter ditt terrarium. Placering, ljus, kondens och beskärning — allt du behöver veta.",
+  alternates: { canonical: "/information" },
+};
 
 const cycleSteps = [
   {
@@ -28,7 +36,7 @@ export default function Information() {
       <Navbar />
       <main className="pt-32 overflow-x-hidden">
         {/* Hero */}
-        <section className="px-6 mb-20">
+        <section aria-label="Introduktion" className="px-6 mb-20">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
             <div className="md:col-span-6 space-y-6">
               <span className="text-xs font-semibold text-on-surface-variant uppercase tracking-widest">Utbildning</span>
@@ -49,7 +57,7 @@ export default function Information() {
         </section>
 
         {/* Closed Cycle */}
-        <section className="px-6 py-20 bg-surface-container-low">
+        <section aria-label="Det slutna kretsloppet" className="px-6 py-20 bg-surface-container-low">
           <div className="max-w-7xl mx-auto">
             <div className="mb-16 text-center">
               <h2 className="font-serif text-3xl font-semibold text-primary mb-4">Det slutna kretsloppet</h2>

@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+
+export const metadata: Metadata = {
+  title: "Sortiment — Handgjorda Terrarier",
+  description:
+    "Köp handgjorda glasterrarier i Stockholm. Mini från 49 kr, litet, medelstort, stort och XL-terrarium upp till 1 195 kr. Beställ via Instagram.",
+  alternates: { canonical: "/sortiment" },
+};
 
 const products = [
   {
@@ -24,8 +32,8 @@ const products = [
     name: "Medelstort terrarium",
     price: "549:-",
     size: "H 16cm × B 5cm",
-    tag: "Perfekta presenten!",
-    tagClass: "bg-tertiary-container text-on-tertiary-fixed-variant",
+    tag: null,
+    tagClass: "",
     desc: "Ett väl avvägt ekosystem med frodiga växter — en uppskattad present till alla tillfällen.",
     image: "/images/md-terrarium.png",
   },
@@ -33,8 +41,8 @@ const products = [
     name: "Medelstort terrarium",
     price: "549:-",
     size: "H 19cm × B 10cm",
-    tag: "Perfekta presenten!",
-    tagClass: "bg-tertiary-container text-on-tertiary-fixed-variant",
+    tag: null,
+    tagClass: "",
     desc: "Rymligare variant med plats för fler växter och en mer dramatisk komposition.",
     image: "/images/md-terrarium-2.png",
   },
@@ -72,7 +80,7 @@ export default function Sortiment() {
     <>
       <Navbar />
       <main className="pt-32 pb-20 max-w-7xl mx-auto px-6">
-        <header className="mb-16 md:mb-24 text-center">
+        <header className="mb-16 md:mb-24 text-center" aria-label="Sortiment">
           <span className="text-xs font-semibold text-on-tertiary-container uppercase tracking-widest mb-4 block">
             Handgjorda ekosystem
           </span>
@@ -92,7 +100,7 @@ export default function Sortiment() {
               <div className="relative overflow-hidden aspect-[4/5] bg-surface-container">
                 <img
                   src={p.image}
-                  alt={p.name}
+                  alt={`${p.name} ${p.size}`}
                   className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                 />
                 {p.tag && (
@@ -123,7 +131,7 @@ export default function Sortiment() {
         </div>
 
         {/* Info Banner */}
-        <section className="mt-20 bg-primary-container rounded-xl overflow-hidden flex flex-col md:flex-row items-stretch">
+        <section aria-label="Om terrarier" className="mt-20 bg-primary-container rounded-xl overflow-hidden flex flex-col md:flex-row items-stretch">
           <div className="md:w-1/2 p-12 lg:p-20 flex flex-col justify-center">
             <h2 className="font-serif text-3xl font-semibold text-primary-fixed mb-6">Vad är ett terrarium?</h2>
             <p className="text-lg text-on-primary-container mb-6 leading-relaxed">

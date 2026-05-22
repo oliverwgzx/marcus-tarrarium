@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SkotselSection from "./components/SkotselSection";
 import YoutubeSection from "./components/YoutubeSection";
+
+export const metadata: Metadata = {
+  title: "Handgjorda Glasterrarier i Stockholm",
+  description:
+    "Köp handgjorda glasterrarier direkt från skaparen. Slutna ekosystem som sköter sig självt — från 49 kr. Baserade i Stockholm.",
+  alternates: { canonical: "/" },
+};
 
 const whyItems = [
   {
@@ -49,17 +57,18 @@ export default function Home() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
-          <div className="absolute inset-0 z-0">
+        <section aria-label="Introduktion" className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
+          <div className="absolute inset-0 z-0" aria-hidden="true">
             <img
               src="/images/terrarium-hero.jpg"
-              alt="Handgjort glasterrarium med frodig mossa"
+              alt=""
               className="w-full h-full object-cover"
+              fetchPriority="high"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-transparent" />
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
-            <div className="max-w-2xl">
+            <header className="max-w-2xl">
               <h1 className="font-serif text-5xl md:text-6xl font-bold mb-4 text-surface-container-lowest leading-tight tracking-tight">
                 Skapa ditt eget lilla ekosystem
               </h1>
@@ -73,9 +82,9 @@ export default function Home() {
               >
                 Se vårt sortiment
               </Link>
-            </div>
+            </header>
           </div>
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce" aria-hidden="true">
             <span className="material-symbols-outlined text-surface-bright opacity-50 text-4xl">expand_more</span>
           </div>
         </section>
