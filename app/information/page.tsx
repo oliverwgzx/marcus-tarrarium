@@ -2,6 +2,7 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import SkotselSection from "../components/SkotselSection";
+import YoutubeSection from "../components/YoutubeSection";
 
 const cycleSteps = [
   {
@@ -73,6 +74,7 @@ export default function Information() {
 
         {/* Skötselråd */}
         <SkotselSection />
+        <YoutubeSection />
 
         {/* Quote Banner */}
         <section className="px-6 py-20">

@@ -148,23 +148,10 @@ export default function SkotselSection({ compact = false }: { compact?: boolean 
           </div>
         )}
 
-        {/* Closing CTA */}
-        <div className="mt-12 bg-primary rounded-xl p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="space-y-3">
-            <h3 className="font-serif text-2xl md:text-3xl font-bold text-on-primary">Lycka till!</h3>
-            <p className="text-on-primary-container max-w-lg">
-              Terrariet sköter i stort sett sig självt så länge det får tillräckligt med ljus. Har du fler frågor? Se mina videoguider på YouTube.
-            </p>
-          </div>
-          <a
-            href="https://www.youtube.com/@marcusterrarium"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-on-tertiary-container text-primary px-8 py-4 rounded-full font-bold whitespace-nowrap hover:opacity-90 transition-opacity"
-          >
-            <span className="material-symbols-outlined">play_circle</span>
-            Se guiden på YouTube
-          </a>
+        <div className="mt-12 text-center">
+          <p className="text-on-surface-variant text-sm">
+            Lycka till! Terrariet sköter sig självt — se videoguider nedan om du har frågor.
+          </p>
         </div>
       </div>
     </section>

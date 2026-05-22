@@ -2,6 +2,7 @@ import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SkotselSection from "./components/SkotselSection";
+import YoutubeSection from "./components/YoutubeSection";
 
 const whyItems = [
   {
@@ -173,6 +174,7 @@ export default function Home() {
 
         {/* Skötselråd */}
         <SkotselSection compact />
+        <YoutubeSection />
 
       </main>
       <Footer />
