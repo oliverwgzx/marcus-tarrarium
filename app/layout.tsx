@@ -15,7 +15,7 @@ const hanken = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://marcus-tarrarium.vercel.app"),
+  metadataBase: new URL("https://marcus-terrarium.vercel.app"),
   title: {
     default: "Marcus Terrarium | Handgjorda Glasterrarier i Stockholm",
     template: "%s | Marcus Terrarium",
@@ -68,7 +68,7 @@ const jsonLd = {
   name: "Marcus Terrarium",
   description:
     "Handgjorda glasterrarier — levande konstverk för ditt hem. Slutna ekosystem som sköter sig självt.",
-  url: "https://marcus-tarrarium.vercel.app",
+  url: "https://marcus-terrarium.vercel.app",
   sameAs: [
     "https://www.instagram.com/marcus_terrarium/",
     "https://www.youtube.com/@marcusterrarium",
@@ -79,7 +79,7 @@ const jsonLd = {
     addressCountry: "SE",
   },
   priceRange: "49 kr – 1 195 kr",
-  image: "https://marcus-tarrarium.vercel.app/images/terrarium-hero.jpg",
+  image: "https://marcus-terrarium.vercel.app/images/terrarium-hero.jpg",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
