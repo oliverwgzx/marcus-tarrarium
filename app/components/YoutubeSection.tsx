@@ -4,11 +4,11 @@ import { useState } from "react";
 const videos = [
   {
     id: "PNBkPbBe0lw",
-    title: "Hur du byter plats på ditt mini terrarium",
+    title: "Hur du byter plast på ditt mini terrarium",
   },
   {
     id: "qgOUeaKuNUw",
-    title: "Hur du byter plats på ditt terrarium",
+    title: "Hur du byter plast på ditt terrarium",
   },
 ];
 
