@@ -150,7 +150,7 @@ export default function SkotselSection({ compact = false }: { compact?: boolean 
 
         <div className="mt-12 text-center">
           <p className="text-on-surface-variant text-sm">
-            Lycka till! Terrariet sköter sig självt — se videoguider nedan om du har frågor.
+            Lycka till! Se videoguider nedan om du har frågor.
           </p>
         </div>
       </div>

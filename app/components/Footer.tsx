@@ -18,7 +18,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-3">
           <span className="text-xs font-semibold text-primary/50 uppercase tracking-widest mb-2">Support</span>
-          <a href="mailto:info@marcusterrarium.se" className="text-sm text-on-surface-variant hover:text-primary underline underline-offset-4 transition-colors duration-300">Kontakt</a>
+          <Link href="https://www.instagram.com/marcus_terrarium/" target="_blank" rel="noopener noreferrer" className="text-sm text-on-surface-variant hover:text-primary underline underline-offset-4 transition-colors duration-300">Kontakt</Link>
           <FraktvillkorModal />
         </div>
       </div>

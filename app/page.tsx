@@ -21,7 +21,7 @@ const whyItems = [
   {
     icon: "palette",
     title: "Estetik",
-    desc: "Varje objekt är ett unikt konstverk. Kombinationen av glas, levande växter och organiska material skapar en lugnande blickpunkt i rummet.",
+    desc: "Varje objekt är ett unikt konstverk. Kombinationen av mossa, levande växter och organiska material skapar en lugnande blickpunkt i rummet.",
   },
   {
     icon: "self_improvement",
@@ -41,13 +41,13 @@ const smallProducts = [
     name: "Litet terrarium",
     price: "175:-",
     image: "/images/sm-terrarium.png",
-    alt: "Litet terrarium H 15cm × B 8cm",
+    alt: "Litet terrarium H 15cm × B 6cm",
   },
   {
     name: "Medelstort terrarium",
     price: "549:-",
     image: "/images/md-terrarium.png",
-    alt: "Medelstort terrarium H 16cm × B 5cm",
+    alt: "Medelstort terrarium H 18cm × B 15cm",
   },
 ];
 
@@ -70,7 +70,7 @@ export default function Home() {
           <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
             <header className="max-w-2xl">
               <h1 className="font-serif text-5xl md:text-6xl font-bold mb-4 text-surface-container-lowest leading-tight tracking-tight">
-                Skapa ditt eget lilla ekosystem
+                Ta hem en liten levande värld
               </h1>
               <p className="text-lg mb-10 text-surface-bright/90 max-w-lg leading-relaxed">
                 Handgjorda terrarier som för in naturen i ditt hem. Ett självgående stycke natur i glas,
@@ -127,7 +127,7 @@ export default function Home() {
             <div className="text-center mb-16">
               <h2 className="font-serif text-3xl font-semibold text-primary mb-4">Utvalt sortiment</h2>
               <p className="text-on-surface-variant max-w-xl mx-auto">
-                Utforska våra mest populära kompositioner, från bordterrarier till stora golvmodeller.
+                Utforska våra mest populära kompositioner, från bordterrarier till större modeller.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

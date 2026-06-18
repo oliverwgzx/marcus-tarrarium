@@ -22,7 +22,7 @@ const products = [
   {
     name: "Litet terrarium",
     price: "175:-",
-    size: "H 15cm × B 8cm",
+    size: "H 15cm × B 6cm",
     tag: null,
     tagClass: "",
     desc: "Frodiga växter i ett elegant glas. Enkel att sköta och fin i alla rum.",
@@ -31,7 +31,7 @@ const products = [
   {
     name: "Medelstort terrarium",
     price: "549:-",
-    size: "H 16cm × B 5cm",
+    size: "H 18cm × B 15cm",
     tag: null,
     tagClass: "",
     desc: "Ett väl avvägt ekosystem med frodiga växter — en uppskattad present till alla tillfällen.",
@@ -40,7 +40,7 @@ const products = [
   {
     name: "Medelstort terrarium",
     price: "549:-",
-    size: "H 19cm × B 10cm",
+    size: "H 18cm × B 15cm",
     tag: null,
     tagClass: "",
     desc: "Rymligare variant med plats för fler växter och en mer dramatisk komposition.",
@@ -49,7 +49,7 @@ const products = [
   {
     name: "Stort terrarium",
     price: "895:-",
-    size: "H 30cm × B 8cm",
+    size: "H 30cm × B 16cm",
     tag: null,
     tagClass: "",
     desc: "En imponerande komposition med höga växter som skapar ett riktigt blickfång i rummet.",
@@ -58,7 +58,7 @@ const products = [
   {
     name: "Stort terrarium",
     price: "895:-",
-    size: "H 30cm × B 8cm",
+    size: "H 30cm × B 16cm",
     tag: null,
     tagClass: "",
     desc: "Frodig och tät vegetation i ett högt glas — ett levande konstverk för hemmet.",

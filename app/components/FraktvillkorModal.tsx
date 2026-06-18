@@ -10,7 +10,7 @@ export default function FraktvillkorModal() {
         onClick={() => setOpen(true)}
         className="text-sm text-on-surface-variant hover:text-primary underline underline-offset-4 transition-colors duration-300 text-left cursor-pointer"
       >
-        Fraktvillkor
+        Upphämtning
       </button>
 
       {open && (
@@ -28,25 +28,10 @@ export default function FraktvillkorModal() {
             </button>
 
             <span className="text-xs font-semibold text-secondary uppercase tracking-widest mb-3 block">Information</span>
-            <h2 className="font-serif text-2xl font-semibold text-primary mb-6">Fraktvillkor</h2>
+            <h2 className="font-serif text-2xl font-semibold text-primary mb-6">Upphämtning</h2>
 
             <div className="space-y-5 text-sm text-on-surface-variant leading-relaxed">
-              <div>
-                <h3 className="font-semibold text-primary mb-1">Leveranstid</h3>
-                <p>Beställningar skickas inom 2–4 arbetsdagar. Leveranstid varierar beroende på din ort.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-primary mb-1">Fraktkostnad</h3>
-                <p>Frakt tillkommer och beräknas vid köp via Instagram. Kontakta oss för mer information.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-primary mb-1">Upphämtning</h3>
-                <p>Upphämtning i Stockholm är möjlig — kontakta oss via Instagram för att boka tid.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-primary mb-1">Reklamation</h3>
-                <p>Vid skada under transport, kontakta oss inom 48 timmar med foto på skadan så löser vi det.</p>
-              </div>
+              <p>Detaljer för upphämtning sker vid beställning.</p>
             </div>
 
             <div className="mt-8 pt-6 border-t border-outline-variant/30">
